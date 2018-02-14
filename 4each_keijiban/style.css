@@ -1,0 +1,17 @@
+.logoimg {
+    height: 50px;
+    width: 300px;
+}
+
+header .menu ul {
+    height: 60px;
+    width: 1200px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+}
+
+header .menu ul li {
+    float: left;
+    padding-left: 30px;
+}
