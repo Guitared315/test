@@ -26,34 +26,59 @@
     <main>
         <div class="left">
             <h1>プログラミングに役立つ掲示板</h1>
-            <div class="input">
+            <div class="input flame">
                 <form method="post" action="insert.php">
-                    <p2>入力フォーム</p2>
-                    <div>ハンドルネーム<br>
+                    <div class="form">
+                        <div class="border">入力フォーム</div>
+                    </div>
+                    <div class="inputc">ハンドルネーム<br>
                         <input type="text" name="name">
                     </div>
-                    <div>タイトル<br>
+                    <div class="inputc">タイトル<br>
                         <input type="text" name="title">
                     </div>
-                    <div>コメント<br>
-                        <textarea rows="5" cols="30" name="comments"></textarea></div>
-                    <div>
+                    <div class="inputc">コメント<br>
+                        <textarea rows="6" cols="40" name="comments"></textarea></div>
+                    <div class="inputc">
                         <input type="submit" value="送信する"></div>
                 </form>
+
             </div>
 
             <div class="keiji">
-                <div class="title">タイトル</div>
-                記事内容
+                <div class="flame">
+                    <div class="title">
+                        タイトル</div>
+                    <div class="kiji">
+                        <script>
+                            function kiji() {
+                                document.write("記事の内容");
+                                for (var i = 0; i < 20; i++) {
+                                    document.write(",記事の内容");
+                                }
+                            }
 
-                <div class="posted">poste by 通りすがり</div>
+                            kiji();
+
+                        </script>
+                    </div>
+
+                    <div class="posted">posted by 通りすがり</div>
+                </div>
             </div>
             <div class="keiji">
-                <div class="title">タイトル</div>
-                記事内容
+                <div class="flame">
+                    <div class="title">タイトル</div>
+                    <div class="kiji">
+                        <script>
+                            kiji();
 
-                <div class="posted">poste by 通りすがり</div>
+                        </script>
+                    </div>
+                    <div class="posted">posted by 通りすがり</div>
+                </div>
             </div>
+
         </div>
 
         <div class="right">

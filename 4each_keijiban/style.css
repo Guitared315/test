@@ -4,14 +4,122 @@
 }
 
 header .menu ul {
-    height: 60px;
+    height: 50px;
     width: 1200px;
     background-color: black;
-    color: white;
-    font-size: 15px;
+    padding-left: 35px;
+
 }
 
 header .menu ul li {
+    color: white;
     float: left;
-    padding-left: 30px;
+    padding-right: 35px;
+    list-style: none;
+    font-size: 15px;
+    line-height: 50px;
+}
+
+.left h1 {
+    border-left: 5px solid;
+    border-bottom: 2px solid;
+    font-size: 26px;
+    padding-left: 7px;
+}
+
+.input {
+    height: 350px;
+
+}
+
+.flame {
+    background-color: ghostwhite;
+    border: 3px solid lightgray;
+}
+
+.inputc {
+    font-size: 15px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+.form {
+
+    border-left: 3px solid darkred;
+    margin-left: 15px;
+    padding-left: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px;
+    margin-bottom: 10px;
+}
+
+.border {
+    border-left: 1px solid darkred;
+    padding-left: 5px;
+}
+
+.keiji {
+    margin-top: 10px;
+}
+
+.keiji .flame {
+    padding-left: 10px;
+}
+
+.keiji .title {
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    border-bottom: 2px dotted lightgray;
+}
+
+.keiji .kiji {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.posted {
+    margin: 5px;
+    font-size: 8px;
+}
+
+.left {
+    float: left;
+    width: 580px;
+}
+
+.right {
+    margin-left: -20px;
+    float: left;
+    width: 300px;
+    margin-bottom: 300px;
+}
+
+.right .popnews {
+    font-weight: bolder;
+    font-size: 18px;
+    border-bottom: 2px dotted lightgray;
+    margin-bottom: 10px;
+}
+
+.right ul {
+
+    padding-right: 20px;
+    list-style: none;
+}
+
+.right ul li {
+    padding-top: 1px;
+    padding-left: 20px;
+}
+
+footer {
+    clear: both;
+    margin-top: 120px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 50px;
+    line-height: 50px;
 }
