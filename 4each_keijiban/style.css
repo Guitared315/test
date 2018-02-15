@@ -28,8 +28,8 @@ header .menu ul li {
 }
 
 .input {
-    height: 350px;
-
+    height: 450px;
+    margin-bottom: 20px;
 }
 
 .flame {
@@ -51,12 +51,15 @@ header .menu ul li {
     font-weight: bold;
     font-size: 20px;
     margin: 15px;
-    margin-bottom: 10px;
 }
 
 .border {
     border-left: 1px solid darkred;
     padding-left: 5px;
+}
+
+.keijiban {
+    margin-top: 50px;
 }
 
 .keiji {

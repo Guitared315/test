@@ -1,6 +1,6 @@
 <?php
 
-mb_internal_encoding("utf8")
+mb_internal_encoding("utf8");
     
 $pdo = new PDO("mysql:dbname=lesson01;host=localhost;","root","mysql");
 
