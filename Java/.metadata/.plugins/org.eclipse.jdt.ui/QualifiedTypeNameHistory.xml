@@ -5,5 +5,6 @@
 <fullyQualifiedTypeName name="jp.co.internous.action.DBConnector"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.portable.ValueOutputStream"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="java.net.ResponseCache"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>

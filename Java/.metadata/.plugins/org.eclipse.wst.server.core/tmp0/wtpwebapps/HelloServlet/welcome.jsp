@@ -8,7 +8,7 @@
 </head>
 <body>
 名前とパスワードを入力して下さい。
-<form method="post" action="WelcomeSevlet">
+<form method="post" action="WelcomeServlet">
 <input type="text" name="username">
 <input type="password" name="password">
 <input type="submit" value="送信">
