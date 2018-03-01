@@ -1,0 +1,14 @@
+
+public class Person {
+	public String name = null;
+	public int age = 0;
+	public String phoneNumber = null;
+	public String address = null;
+
+	public void disp() {
+		System.out.println(this.name);
+		System.out.println(this.age);
+		System.out.println(this.phoneNumber);
+		System.out.println(this.address);
+	}
+}

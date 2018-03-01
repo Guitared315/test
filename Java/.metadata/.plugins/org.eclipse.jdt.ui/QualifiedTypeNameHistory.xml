@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.InstantiationException"/>
+<fullyQualifiedTypeName name="jp.co.internous.action.TestUserDAO"/>
+<fullyQualifiedTypeName name="jp.co.internous.action.DBConnector"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.portable.ValueOutputStream"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+</qualifiedTypeNameHistroy>

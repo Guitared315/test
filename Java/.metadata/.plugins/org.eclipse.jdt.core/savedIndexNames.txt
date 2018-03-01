@@ -1,0 +1,7 @@
+INDEX VERSION 1.127+C:\Users\internousdev\Desktop\workspace\workspace-Sato\test\Java\.metadata\.plugins\org.eclipse.jdt.core
+2055351946.index
+4269759981.index
+2573306658.index
+3475807842.index
+2094687973.index
+2530802075.index

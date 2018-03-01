@@ -1,0 +1,8 @@
+import java.io.BufferedReader;
+
+public class HelloWorld {
+	public static void main(String[] args){
+		BufferedReader br = new BufferedReader(InputStreamReader(System.in));
+
+	}
+}

@@ -1,0 +1,14 @@
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		int a = 0;
+		while(i < 10){
+			Sysmte.out.println(0);
+
+			i++;
+		}
+	}
+}
+

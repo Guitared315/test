@@ -1,0 +1,14 @@
+package jp.co.internous.action;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapTest {
+
+	public static void main(String[] args){
+		Map<String,String> map = new HashMap<String,String>();
+
+		//値のセットはputメソッドを利用
+		map.put("key1", "value1");
+	}
+}

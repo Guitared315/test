@@ -1,0 +1,11 @@
+
+public class Test {
+	public static void main(String[] args){
+
+		Person a = new Person();
+		a.name = "山田太郎";
+		a.age = 21;
+		a.address = "神奈川県";
+		a.phoneNumber = "080-3333-4433"
+	}
+}
