@@ -1,0 +1,19 @@
+package com.internousdev.ecsite.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+public class AdminLoginAction extends ActionSupport implements SessionAware{
+	private String adminId;
+	private String adminPassword;
+	public Map<String,Objet> session;
+	private AdminLoginDAO adminLoginDAO = new AdminLoginDAO;
+	private AdminLoginDTO adminLoginDTO = new AdminLoginDTO;
+
+	public String execute(){
+		String result = ERROR;
+	}
+}
+

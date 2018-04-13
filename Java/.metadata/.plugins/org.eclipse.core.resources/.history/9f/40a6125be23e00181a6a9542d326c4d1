@@ -1,0 +1,21 @@
+package com.internousdev.ecsite.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class UserAdmin extends ActionSupport implements SessionAware{
+
+	public Map<String,Object> session;
+
+	public String execute(){
+		String result = SUCCESS;
+		return result;
+	}
+
+	public Map<String,Object> getSession(){
+		return session;
+	}
+}
