@@ -1,0 +1,47 @@
+package com.internousdev.ecsite.action;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsite.dto.UserInfoDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class AdminHomeAction extends ActionSupport implements SessionAware {
+	public Map<String, Object> session;
+	private ArrayList<UserInfoDTO> userList;
+	int goNum;
+
+	public String execute() {
+
+		String result = SUCCESS;
+		switch (goNum) {
+		case 1:
+			result = "user";
+			break;
+		case 2:
+			result = "item";
+			break;
+		}
+		return result;
+
+	}
+
+	public int getGoNum() {
+		return goNum;
+	}
+
+	public void setGoNum(int goNum) {
+		this.goNum = goNum;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+}

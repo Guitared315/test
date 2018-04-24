@@ -7,8 +7,6 @@
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
 <fullyQualifiedTypeName name="java.net.ResponseCache"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
-<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite.util.DBConnector"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
@@ -18,4 +16,10 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite.dto.DeleteUserDTO"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.SQLError"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="org.apache.catalina.User"/>
+<fullyQualifiedTypeName name="com.internousdev.ecsite.dto.UserInfoDTO"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>

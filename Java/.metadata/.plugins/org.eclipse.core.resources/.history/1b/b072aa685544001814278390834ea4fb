@@ -1,0 +1,16 @@
+package com.internousdev.ecsite.action;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class DeleteUserConfirmAction extends ActionSupport implements SessionAware{
+	public Map<String,Object> session;
+
+	private String userNum;
+	private String userId;
+	private String userPass;
+	private String userName;
+
+
+}

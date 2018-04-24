@@ -6,31 +6,67 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.ecsite.dao.DeleteUserDAO;
-import com.internousdev.ecsite.dto.DeleteUserDTO;
+import com.internousdev.ecsite.dao.UserInfoDAO;
+import com.internousdev.ecsite.dto.UserInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class UserAdminAction extends ActionSupport implements SessionAware{
+public class UserAdminAction extends ActionSupport implements SessionAware {
 
-	public Map<String,Object> session;
-	private DeleteUserDAO deleteUserDAO = new DeleteUserDAO();
-	private ArrayList<DeleteUserDTO> userList = new ArrayList<DeleteUserDTO>();
+	public Map<String, Object> session;
+	private UserInfoDAO userInfoDAO = new UserInfoDAO();
+	private ArrayList<UserInfoDTO> userList = new ArrayList<UserInfoDTO>();
+	private boolean userExist;
+	private String userNum;
 
-	public String execute() throws SQLException{
-		userList = deleteUserDAO.getUserInfo();
-		String result = SUCCESS;
-		if(userList == null){
-			result = ERROR;
+
+	int goNum;
+
+	public String execute() throws SQLException {
+		userList = userInfoDAO.getUserInfo();
+		if (!(userList.isEmpty())) {
+			userExist = true;
+		}else if(userList.isEmpty()){
+			userExist = false;
 		}
+		String result = SUCCESS;
 		return result;
 
 	}
 
-	public Map<String,Object> getSession(){
+	public String getUserNum() {
+		return userNum;
+	}
+
+	public void setUserNum(String userNum) {
+		this.userNum = userNum;
+	}
+
+	public void setUserList(ArrayList<UserInfoDTO> userList) {
+		this.userList = userList;
+	}
+
+	public ArrayList<String> userList() {
+		return this.userList();
+	}
+
+	public Map<String, Object> getSession() {
 		return session;
 	}
 
-	public void setSession(Map<String,Object> session){
+	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
+
+	public ArrayList<UserInfoDTO> getUserList() {
+		return this.userList;
+	}
+
+	public boolean isUserExist() {
+		return userExist;
+	}
+
+	public void setUserExist(boolean userExist) {
+		this.userExist = userExist;
+	}
+
 }

@@ -1,0 +1,78 @@
+package com.internousdev.ecsite.action;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsite.dao.UserInfoDAO;
+import com.internousdev.ecsite.dto.UserInfoDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class DeleteUserConfirmAction extends ActionSupport implements SessionAware {
+	public Map<String, Object> session;
+
+	private UserInfoDAO userInfoDAO = new UserInfoDAO();
+	private ArrayList<UserInfoDTO> userList = new ArrayList<UserInfoDTO>();
+
+	private ArrayList<String> userNumList;
+	private String userNum;
+
+	private String deleteFlg;
+
+	public String execute() throws SQLException {
+
+		String result = SUCCESS;
+		return result;
+	}
+
+	public UserInfoDAO getUserInfoDAO() {
+		return userInfoDAO;
+	}
+
+	public void setUserInfoDAO(UserInfoDAO userInfoDAO) {
+		this.userInfoDAO = userInfoDAO;
+	}
+
+	public ArrayList<UserInfoDTO> getUserList() {
+		return userList;
+	}
+
+	public void setUserList(ArrayList<UserInfoDTO> userList) {
+		this.userList = userList;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+	public String getUserNum() {
+		return userNum;
+	}
+
+	public void setUserNum(String userNum) {
+		this.userNum = userNum;
+	}
+
+	public String getDeleteFlg() {
+		return deleteFlg;
+	}
+
+	public void setDeleteFlg(String deleteFlg) {
+		this.deleteFlg = deleteFlg;
+	}
+
+	public ArrayList<String> getUserNumList() {
+		return userNumList;
+	}
+
+	public void setUserNumList(ArrayList<String> userNumList) {
+		this.userNumList = userNumList;
+	}
+
+}

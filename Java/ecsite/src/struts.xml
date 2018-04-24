@@ -90,32 +90,47 @@
 			<result name="success">adminHome.jsp</result>
 		</action>
 
+		<!-- AdminHomeAction -->
+		<action name="AdminHomeAction" class="com.internousdev.ecsite.action.AdminHomeAction"
+			method="execute">
+			<result name="success">adminHome.jsp</result>
+			<result name="user">userAdmin.jsp</result>
+			<result name="item">itemAdmin.jsp</result>
+		</action>
+
+		<!-- GoAdminHomeAction -->
+		<action name="GoAdminHomeAction" class="com.internousdev.ecsite.action.GoAdminHomeAction"
+			method="execute">
+			<result name="success">adminHome.jsp</result>
+		</action>
+
 		<!-- UserAdminAction -->
 		<action name="UserAdminAction" class="com.internousdev.ecsite.action.UserAdminAction"
 			method="execute">
-			<result name="success">deleteUser.jsp</result>
-			<result name="error">userAdmin.jsp</result>
+			<result name="success">userAdmin.jsp</result>
 		</action>
-		<!-- DeleteUserAction -->
-<!-- 		<action name="DeleteUserAction " class="com.internousdev.ecsite.action.DeleteUserAction" -->
-<!-- 			method="execute"> -->
-<!-- 			<result name="success">deleteUserConfirm.jsp</result> -->
-<!-- 			<result name="error">deleteUser.jsp</result> -->
-<!-- 		</action> -->
+
+		<!--DeleteUserAction -->
+		<action name="DeleteUserAction" class="com.internousdev.ecsite.action.DeleteUserAction"
+			method="execute">
+			<result name="success">deleteUserConfirm.jsp</result>
+			<result name="error">deleteUser.jsp</result>
+		</action>
+
 
 		<!-- DeleteUserConfirmAction -->
-<!-- 		<action name="DeleteUserConfirmAction" -->
-<!-- 			class="com.internousdev.ecsite.action.DeleteUserConfirmAction" -->
-<!-- 			method="execute"> -->
-<!-- 			<result name="success">deleteUserComplete.jsp</result> -->
-<!-- 			<result name="error">deleteUser.jsp</result> -->
-<!-- 		</action> -->
+		<action name="DeleteUserConfirmAction"
+			class="com.internousdev.ecsite.action.DeleteUserConfirmAction"
+			method="execute">
+			<result name="success">deleteUserConfirm.jsp</result>
+		</action>
 
 		<!-- DeleteUserCompleteAction -->
-<!-- 		<action name="DeleteUserCompleteAction" -->
-<!-- 			class="com.internousdev.ecsite.action.DeleteUserCompleteAction" -->
-<!-- 			method="execute"> -->
-<!-- 			<result name="success">deleteUser.jsp</result> -->
-<!-- 		</action> -->
+		<action name="DeleteUserCompleteAction"
+			class="com.internousdev.ecsite.action.DeleteUserCompleteAction"
+			method="execute">
+			<result name="success">deleteUserComplete.jsp</result>
+			<result name="error">deleteUserError.jsp</result>
+		</action>
 	</package>
 </struts>

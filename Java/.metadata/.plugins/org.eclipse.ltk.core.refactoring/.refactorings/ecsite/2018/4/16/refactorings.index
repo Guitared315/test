@@ -1,0 +1,13 @@
+1523868572917	要素を削除
+1523868577502	リソース 'deleteUser.jsp' の名前変更
+1523868646017	リソース 'userAdmin.jsp' の名前変更
+1523868805226	型名 'UserAdminAction' を変更します
+1523868810364	型名 'DeleteUser' を変更します
+1523942720291	型名 'DeleteUserDAO' を変更します
+1523942809459	型名 'DeleteUserDTO' を変更します
+1523943237047	型名 'UserAdminAction' を変更します
+1523943244143	型名 'DeleteUserAction' を変更します
+1523943252300	型名 'DeleteUserAction1' を変更します
+1523948882765	フィールド 'userNum' をカプセル化します
+1524199158117	要素を削除
+1524200099728	型名 'DeleteUserComplete' を変更します

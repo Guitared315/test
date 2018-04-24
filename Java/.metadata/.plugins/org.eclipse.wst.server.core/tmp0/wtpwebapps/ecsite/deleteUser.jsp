@@ -13,6 +13,52 @@
 <title>ユーザー管理画面</title>
 
 <style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	letter-spacing: 1px;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	background: #fff;
+}
+
+table {
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* ======== ID LAYOUT ======== */
+#top {
+	width: 780px;
+	margin: 30px auto;
+	border: 1px solid #333;
+}
+
+#header {
+	width: 100%;
+	height: 80px;
+	background-color: black;
+}
+
+#main {
+	width: 100%;
+	height: 500px;
+	text-align: center;
+}
+
+#footer {
+	width: 100%;
+	height: 80px;
+	background-color: black;
+	clear: both;
+}
+
+#text-right {
+	display: inline-block;
+	text-align: right;
+}
 </style>
 
 </head>
@@ -22,25 +68,41 @@
 	</div>
 	<div id="main">
 		<div id="top">
-			<table border="1">
-				<tr>
-					<th>ユーザー番号</th>
-					<th>ユーザーID</th>
-					<th>ユーザーパスワード</th>
-					<th>ユーザー名</th>
-					<th>最終更新日</th>
-				</tr>
-				<s:iterator value="userList">
-					<tr>
-						<td><s:property value="userNum" /></td>
-						<td><s:property value="userId" /></td>
-						<td><s:property value="userPass" /></td>
-						<td><s:property value="userName" /></td>
-						<td><s:property value="userDate" /></td>
-					</tr>
-				</s:iterator>
-			</table>
+			<p>ユーザー管理画面</p>
 		</div>
+		<s:if test="userList == null">
+			<h3>ユーザー登録はありません。</h3>
+		</s:if>
+		<s:elseif test="message == null">
+			<h3>以下のユーザーから操作を選択してください。</h3>
+			<s:form action="DeleteUserConfirmAction">
+				<table border="1">
+					<tr>
+						<th></th>
+						<th>ユーザー番号</th>
+						<th>ユーザーID</th>
+						<th>ユーザーパスワード</th>
+						<th>ユーザー名</th>
+						<th>登録日</th>
+					</tr>
+					<s:iterator value="userList">
+						<tr>
+
+							<td><s:checkbox name="userNumList" fieldValue="%{userNum}"
+									theme="simple" /></td>
+							<td><s:property value="userNum" escape="false" /></td>
+							<td><s:property value="userId" escape="false" /></td>
+							<td><s:property value="userPass" escape="false" /></td>
+							<td><s:property value="userName" escape="false" /></td>
+							<td><s:property value="userDate" escape="false" /></td>
+
+						</tr>
+
+					</s:iterator>
+				</table>
+				<s:submit value="削除" />
+			</s:form>
+		</s:elseif>
 	</div>
 	<div id="footer">
 		<div id="pr"></div>

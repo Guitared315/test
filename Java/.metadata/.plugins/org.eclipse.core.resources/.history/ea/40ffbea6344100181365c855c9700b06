@@ -1,0 +1,37 @@
+package com.internousdev.ecsite.action;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsite.dao.DeleteUserDAO;
+import com.internousdev.ecsite.dto.DeleteUserDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class UserAdminAction extends ActionSupport implements SessionAware{
+
+	public Map<String,Object> session;
+	private DeleteUserDAO deleteUserDAO = new DeleteUserDAO();
+	private ArrayList<DeleteUserDTO> userList = new ArrayList<DeleteUserDTO>();
+
+	public String execute() throws SQLException{
+		userList = deleteUserDAO.getUserInfo();
+		String result = SUCCESS;
+		return result;
+
+	}
+
+	public Map<String,Object> getSession(){
+		return session;
+	}
+
+	public void setSession(Map<String,Object> session){
+		this.session = session;
+	}
+
+	public ArrayList<DeleteUserDTO> getUserList(){
+		return this.userList;
+	}
+}

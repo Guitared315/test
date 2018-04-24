@@ -1,0 +1,64 @@
+package com.internousdev.ecsite.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.internousdev.ecsite.dto.DeleteUserDTO;
+import com.internousdev.ecsite.util.DBConnector;
+
+public class DeleteUserDAO {
+
+	private DBConnector dbConnector = new DBConnector();
+	private Connection connection = dbConnector.getConnection();
+
+
+	public ArrayList<DeleteUserDTO> getUserInfo() throws SQLException{
+		ArrayList<DeleteUserDTO> deleteUserDTO = new ArrayList<DeleteUserDTO>();
+		String sql =
+				"SELECT"
+				+ " id, login_id, login_pass, user_name, insert_date"
+				+ " FROM"
+				+ " login_user_transaction";
+
+		try{
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while(resultSet.next()){
+				DeleteUserDTO dto = new DeleteUserDTO();
+				dto.setUserNum(resultSet.getString("id"));
+				dto.setUserId(resultSet.getString("login_id"));
+				dto.setUserPass(resultSet.getString("login_pass"));
+				dto.setUserName(resultSet.getString("user_name"));
+				dto.setUserDate(resultSet.getString("insert_date"));
+				deleteUserDTO.add(dto);
+			}
+		} catch (Exception e){
+			e.printStackTrace();
+		}finally{
+			connection.close();
+		}
+		return deleteUserDTO;
+	}
+
+	public int deleteUserAccount(String id) throws SQLException{
+		String sql = "DELETE FROM"
+				+ " login_user_transaction"
+				+ "	WHERE "
+				+ " id = ?";
+
+		PreparedStatement preparedStatement;
+		try{
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, id);
+			int result = preparedStatement.executeUpdate();
+		}catch (SQLException e){
+			e.printStackTrace();
+		}finally{
+			connection.close();
+		}
+		return int;
+	}
+}

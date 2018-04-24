@@ -1,0 +1,140 @@
+package com.internousdev.ecsite.action;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsite.dao.DeleteUserDAO;
+import com.internousdev.ecsite.dto.DeleteUserDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class UserAdminAction extends ActionSupport implements SessionAware {
+
+	public Map<String, Object> session;
+	private DeleteUserDAO deleteUserDAO = new DeleteUserDAO();
+	private ArrayList<DeleteUserDTO> userList = new ArrayList<DeleteUserDTO>();
+	private String deleteFlg;
+
+	private String userNum;
+	private String userId;
+	private String userPass;
+	private String userName;
+	private String userDate;
+	private Collection<String> checkList;
+
+
+	public String execute() throws SQLException {
+		String result = ERROR;
+
+//		String[] userNumList = userNum.split(", ",0);
+//		String[] userIdList = userId.split(", ",0);
+//		String[] userPassList = userPass.split(", ",0);
+//		String[] userNameList = userName.split(", ",0);
+//		String[] userDateList = userDate.split(", ",0);
+
+		int count=0;
+		if(deleteFlg !=null){
+			for(String check: checkList){
+				System.out.println("check--->"+check);
+
+				if (deleteFlg == null) {
+					userList = deleteUserDAO.getUserInfo();
+				}else if(deleteFlg.equals("1")){
+					count = this.delete(check);
+				}
+			}
+		}
+
+		if(count >0){
+			result=SUCCESS;
+		}
+
+
+		return result;
+	}
+
+	public void delete(String check) throws SQLException {
+
+		for(String userNum:checkList){
+		String deleteUserNum = session.get(userNum).toString();
+		deleteUserDAO.deleteUserAccount(deleteUserNum);
+		};
+	}
+
+
+
+	public String getUserNum() {
+		return userNum;
+	}
+
+	public void setUserNum(String userNum) {
+		this.userNum = userNum;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getUserPass() {
+		return userPass;
+	}
+
+	public void setUserPass(String userPass) {
+		this.userPass = userPass;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getUserDate() {
+		return userDate;
+	}
+
+	public void setUserDate(String userDate) {
+		this.userDate = userDate;
+	}
+
+	public void setUserList(ArrayList<DeleteUserDTO> userList) {
+		this.userList = userList;
+	}
+
+	public void setCheckList(Collection<String> checkList) {
+		this.checkList = checkList;
+	}
+
+	public String getDeleteFlg(){
+		return deleteFlg;
+	}
+
+	public void setDeleteFlg(String deleteFlg){
+		this.deleteFlg = deleteFlg;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+	public ArrayList<DeleteUserDTO> getUserList() {
+		return this.userList;
+	}
+
+
+
+
+}

@@ -83,10 +83,10 @@ table {
 		</div>
 		<s:form id="kanri">
 			<tr>
-				<td><input type="button" value="ユーザー管理" onclick="submitAction('UserAdminAction')" /></td>
+				<td><input type="button" value="ユーザー管理" onclick="submitAction('UserAdminAction')"></td>
 			</tr>
 			<tr>
-				<td><input type="button" value="商品管理" /></td>
+				<td><input type="button" value="商品管理" onclick="submitAction('ItemAdminAction')"></td>
 			</tr>
 		</s:form>
 		<br> <a href='<s:url action="GoHomeAction"/>'>ログアウト</a>

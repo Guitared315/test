@@ -1,0 +1,24 @@
+package com.internousdev.ecsite.action;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsite.dao.UserInfoDAO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class DeleteUserCompleteAction extends ActionSupport implements SessionAware{
+	public Map<String,Object> session;
+
+	private UserInfoDAO userInfoDAO = new UserInfoDAO();
+	private String userNum;
+	private ArrayList<String> userNumList = new ArrayList<String>();
+
+	public String delete(){
+		String result = SUCCESS;
+		for(String deleteUserNum:userNumList){
+			userInfoDAO.deleteUserAccount(deleteUserNum);
+		}
+	}
+}
